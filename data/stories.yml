@@ -1,0 +1,113 @@
+version: "2.0"
+
+stories:
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: affirm
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keyword: king
+  - slot_was_set:
+    - keyword:
+      - king
+  - action: action_submit_query
+  - slot_was_set:
+    - keyword: none
+  - intent: find_fact
+    entities:
+    - keyword: billie
+    - keyword: holiday
+  - slot_was_set:
+    - keyword:
+      - billie
+      - holiday
+  - action: action_submit_query
+  - intent: find_fact
+    entities:
+    - keyword: aretha
+    - keyword: franklin
+  - slot_was_set:
+    - keyword:
+      - aretha
+      - franklin
+  - action: action_submit_query
+  - intent: find_fact
+    entities:
+    - keyword: inventors
+  - slot_was_set:
+    - keyword:
+      - inventors
+  - action: action_submit_query
+  - slot_was_set:
+    - keyword: none
+  - intent: human_handoff
+  - action: utter_no_humans
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: utter_about
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: how
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keyword: malcolm
+    - keyword: x
+  - slot_was_set:
+    - keyword:
+      - malcolm
+      - x
+  - action: action_submit_query
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: find_fact
+    entities:
+    - keyword: communism
+  - slot_was_set:
+    - keyword:
+      - communism
+  - action: action_submit_query
+  - intent: find_fact
+    entities:
+    - keyword: politics
+  - slot_was_set:
+    - keyword:
+      - politics
+  - action: action_submit_query
+  - slot_was_set:
+    - keyword: none
+  - intent: find_fact
+    entities:
+    - keyword: communists
+  - slot_was_set:
+    - keyword:
+      - communists
+  - action: action_submit_query
+  - slot_was_set:
+    - keyword: none
+  - intent: find_fact
+    entities:
+    - keyword: sport
+  - slot_was_set:
+    - keyword:
+      - sport
+  - action: action_submit_query
+  - slot_was_set:
+    - keyword: none
+  - intent: thank
+  - action: utter_youre_welcome
+  - intent: goodbye
+  - action: utter_goodbye

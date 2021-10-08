@@ -1,0 +1,61 @@
+# #### This file contains tests to evaluate that your bot behaves as expected.
+# #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+version: "2.0"
+
+stories:
+- story: Story from Conversation ID 2d830312e2704452b1edc280bfb85ac6
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - user: |
+      ok, search for billie holiday
+    intent: find_fact
+  - user: |
+      wow that's interesting
+    intent: happy_with_result
+  - action: utter_happy_to_help
+  - user: |
+      what about [Martin](keyword) [luther](keyword) [king](keyword)
+    intent: find_fact
+  - slot_was_set:
+    - keyword:
+      - Martin
+      - luther
+      - king
+  - action: action_submit_query
+  - slot_was_set:
+    - keyword: none
+  - user: |
+      thanks for your help
+    intent: thank
+  - action: utter_youre_welcome
+  - user: |
+      bye
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: Story from Conversation ID bc52f006a19d4161a8a665acc3089c2b
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - user: |
+      do you know anything about bob marley?
+    intent: find_fact
+  - slot_was_set:
+    - keyword:
+      - bob
+      - marley
+  - user: |
+      what kind of music did he play?
+    intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: thank
+  - action: utter_youre_welcome
+  - intent: goodbye
+  - action: utter_goodbye

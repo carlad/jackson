@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+- rule: Say 'there are no humans' anytime the user asks for a handoff
+  steps:
+  - intent: human_handoff
+  - action: utter_no_humans
+
+- rule: Explain what the bot can help with
+  steps:
+  - intent: help
+  - action: utter_help
+  - action: utter_how

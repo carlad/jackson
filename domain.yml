@@ -1,0 +1,74 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- unhappy_with_result
+- goodbye
+- how
+- find_fact
+- thank
+- greet
+- affirm
+- human_handoff
+- bot_challenge
+- request_query
+- deny
+- help
+- out_of_scope
+- stop
+- happy_with_result
+entities:
+- keyword
+slots:
+  keyword:
+    type: list
+    influence_conversation: true
+responses:
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_about:
+  - text: I'm Jackson. I'm here to help you find historical facts from black history. I search the Black History API database for you.
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey!
+  utter_happy:
+  - text: Great
+  utter_help:
+  - text: I'm here to help you find historical facts from black history.
+  utter_how:
+  - text: Just enter a name or some keywords.
+  utter_ask_for_keywords:
+  - text: Who or what would you like information about?
+  utter_iamabot:
+  - text: I am a bot called Jackson, powered by Rasa.
+  utter_no_humans:
+  - text: Sorry, no humans can help with this.
+  utter_out_of_scope:
+  - text: Sorry, I can't help with that.
+  utter_sorry_about_result:
+  - text: I'm sorry about that. I can only find what the Black History API database contains.
+  utter_submit:
+  - text: I have submitted your request.
+  utter_youre_welcome:
+  - text: you're welcome.
+  utter_what_else:
+  - text: What else can I help you with?
+  utter_happy_to_help:
+  - text: Happy to help :)
+actions:
+- action_submit_query
+- utter_about
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_help
+- utter_how
+- utter_iamabot
+- utter_no_humans
+- utter_out_of_scope
+- utter_sorry_about_result
+- utter_what_keywords
+- utter_youre_welcome
+- utter_what_else

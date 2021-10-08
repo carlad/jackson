@@ -1,0 +1,5 @@
+.python-version
+*.db*
+bha_credentials.yml
+results
+story_graph.dot
