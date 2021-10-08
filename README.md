@@ -1,3 +1,5 @@
+## Description
+
 Jackson is a chatbot that helps find historical facts about black people. It is named after Mary W. Jackson, the first African American female engineer at NASA.
 
 Jackson is built with [Rasa](https://github.com/RasaHQ/rasa), the open source machine learning framework that automates text-and voice-based conversations. Jackson uses the [Black History API](https://blackhistoryapi.com/), which documents achievements and facts about black people, past and present. 
