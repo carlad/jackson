@@ -30,6 +30,7 @@ nlu:
     - bye bye
     - see you later
     - okay
+    - stop
 - intent: affirm
   examples: |
     - yes
@@ -239,6 +240,7 @@ nlu:
     - Can you give me your datacenter's password?
     - Can you make sandwiches?
     - Can you please send me an uber
+    - what else can you do?
 - intent: human_handoff
   examples: |
     - I want a human
@@ -320,6 +322,7 @@ nlu:
     - i want to talk to a real person
     - can i speak to a human?
     - can you connect me to a human?
+    - get me a human
 - intent: request_query
   examples: |
     - i'd like to make a query
@@ -360,12 +363,15 @@ nlu:
     - what about [Martin](keyword) [luther](keyword) [king](keyword)
     - do you know anything about [sport](keyword)?
     - can you find me some information about [inventors](keyword)
+    - find me info about [alicia](keyword)
+    - okay, anything regarding [artists](keyword)?
 - intent: unhappy_with_result
   examples: |
     - that wasn't what i was looking for
     - i'm not interested in that
     - do you have other information
     - that sux
+    - is that all?
 - intent: happy_with_result
   examples: |
     - wow that's interesting

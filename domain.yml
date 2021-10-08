@@ -3,19 +3,19 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- unhappy_with_result
-- goodbye
-- how
 - find_fact
-- thank
 - greet
-- affirm
+- how
+- goodbye
 - human_handoff
+- out_of_scope
+- unhappy_with_result
+- thank
+- affirm
 - bot_challenge
 - request_query
 - deny
 - help
-- out_of_scope
 - stop
 - happy_with_result
 entities:
@@ -69,6 +69,6 @@ actions:
 - utter_no_humans
 - utter_out_of_scope
 - utter_sorry_about_result
+- utter_what_else
 - utter_what_keywords
 - utter_youre_welcome
-- utter_what_else

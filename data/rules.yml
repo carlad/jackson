@@ -1,6 +1,16 @@
 version: "2.0"
 
 rules:
+- rule: execute a search action
+  steps:
+    - intent: find_fact
+    - action: action_submit_query
+
+- rule: apologise for unsatifactory search results
+  steps:
+    - intent: unhappy_with_result
+    - action: utter_sorry_about_result
+
 - rule: Say 'there are no humans' anytime the user asks for a handoff
   steps:
   - intent: human_handoff

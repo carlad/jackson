@@ -111,3 +111,35 @@ stories:
   - action: utter_youre_welcome
   - intent: goodbye
   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: find_fact
+    entities:
+    - keyword: alicia
+  - slot_was_set:
+    - keyword:
+      - alicia
+  - action: action_submit_query
+  - intent: human_handoff
+  - action: utter_no_humans
+  - intent: how
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keyword: artists
+  - slot_was_set:
+    - keyword:
+      - artists
+  - action: action_submit_query
+  - slot_was_set:
+    - keyword: none
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: goodbye
+  - action: utter_goodbye
