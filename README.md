@@ -22,11 +22,10 @@ pip install pattern
 
 ## To run
 
-To enable api calls to the Black History API you will need to [sign-up](https://blackhistoryapi.com/#signUp) for an api key from the Black History API, then add this key to a new file in the home directory named `bha_credentials.yml`
+To enable api calls to the Black History API you will need to [sign-up](https://blackhistoryapi.com/#signUp) for an api key from the Black History API, then add this key to a new file in the home directory named `bha_credentials.py`
 
 ```
-credentials:
-    API_KEY: XXXXXXXXXXXX
+API_KEY = 'XXXXXXXXXXXX'
 ```
 
 To talk to Jackson on the command line, start the Rasa Action Server in one terminal window: 

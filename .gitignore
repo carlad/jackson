@@ -1,5 +1,5 @@
 .python-version
 *.db*
-bha_credentials.yml
+bha_credentials.py
 results
 story_graph.dot

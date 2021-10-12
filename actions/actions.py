@@ -10,8 +10,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from pattern.text.en import singularize
 from typing import Any, Dict, List, Text
 import requests
-import yaml
-
+import bha_credentials
 
 class ActionSubmitQuery(Action):
     """Format keywords and submits query to black history api."""
@@ -33,12 +32,8 @@ class ActionSubmitQuery(Action):
             return
 
         else:
-            #  retrieve black history api key
-            with open('./bha_credentials.yml', 'r') as ymlfile:
-                cfg = yaml.safe_load(ymlfile)
-                key = cfg['credentials']['API_KEY']
-
-            headers = {'x-api-key': key}
+            # set headers
+            headers = {'x-api-key': bha_credentials.API_KEY}
 
             # find a random fact
             if keywords[0] == 'random':

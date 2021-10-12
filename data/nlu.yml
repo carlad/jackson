@@ -397,6 +397,14 @@ nlu:
     - give me a [random](keyword) fact
     - find em something [random](keyword)
     - something [random](keyword)
+    - any [musicians](keyword)?
+    - what about [prince](keyword)?
+    - [michael](keyword) [jackson](keyword)
+    - [sport](keyword)
+    - [sport](keyword)?
+    - anything about [politics](keyword)?
+    - are you sure there's nothing [random](keyword)?
+    - oh, okay how about we start with something [random](keyword)
 - intent: unhappy_with_result
   examples: |
     - that wasn't what i was looking for
