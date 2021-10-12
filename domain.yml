@@ -44,7 +44,7 @@ responses:
   utter_iamabot:
   - text: I am a bot called Jackson, powered by Rasa.
   utter_no_humans:
-  - text: Sorry, no humans can help with this.
+  - text: Sorry, no humans are available. Visit [https://www.blackhistoryapi.io/](https://www.blackhistoryapi.io/) for more information about the Black History API.
   utter_out_of_scope:
   - text: Sorry, I can't help with that.
   utter_sorry_about_result:

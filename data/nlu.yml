@@ -16,6 +16,7 @@ nlu:
     - goodevening
     - good afternoon
     - hi there
+    - hi there what's happening?
 - intent: goodbye
   examples: |
     - good afternoon
@@ -211,6 +212,8 @@ nlu:
     - how do you work
     - how do i search?
     - how do you work?
+    - okay, how do you work?
+    - how can I find out more about this bot?
 - intent: out_of_scope
   examples: |
     - what is the square root of 5
@@ -241,6 +244,7 @@ nlu:
     - Can you make sandwiches?
     - Can you please send me an uber
     - what else can you do?
+    - what kind of music did he play?
 - intent: human_handoff
   examples: |
     - I want a human
@@ -323,6 +327,7 @@ nlu:
     - can i speak to a human?
     - can you connect me to a human?
     - get me a human
+    - find me a human
 - intent: request_query
   examples: |
     - i'd like to make a query
@@ -359,12 +364,39 @@ nlu:
     - do you have information about [inventors](keyword)?
     - do you have anything about [martin](keyword) [luther](keyword) [king](keyword)?
     - who is maya [angelou](keyword)?
-    - okay, find me something about maya [angelou](keyword)
+    - okay, find me something about [maya](keyword) [angelou](keyword)
     - what about [Martin](keyword) [luther](keyword) [king](keyword)
     - do you know anything about [sport](keyword)?
     - can you find me some information about [inventors](keyword)
     - find me info about [alicia](keyword)
     - okay, anything regarding [artists](keyword)?
+    - what do you know about [bob](keyword) [marley](keyword)?
+    - like, [muhammad](keyword) [ali](keyword)
+    - do you have facts about muhammad [ali](keyword):?
+    - show me all the facts
+    - give me [all] the facts
+    - I want to know more about [spike](keyword) [lee](keyword)
+    - can you find me anything about [dancers](keyword)?
+    - [dance](keyword)
+    - do you know any [dancers](keyword)
+    - what about [dance](keyword)
+    - do you know any [[dancers](keyword)]
+    - do you have anything about [dance](keyword)
+    - can you find me [all](keyword) the facts
+    - can you fin me anything about [dancers](keyword)?
+    - what do you know about [louis](keyword) [armstrong](keyword)?
+    - what about [oprah](keyword) [winfrey](keyword)
+    - what about [michael](keyword) [jackson](keyword)
+    - find me info about [louis](keyword) [armstrong](keyword)
+    - [random](keyword)
+    - what do you know about [Sha'Carri](keyword) [Richardson](keyword)?
+    - find me a [random](keyword) fact
+    - do you know about[ Sha'Carri](keyword) [Richardson](keyword)
+    - [Sha'Carri](keyword) [Richardson](keyword)
+    - find me something [random](keyword)
+    - give me a [random](keyword) fact
+    - find em something [random](keyword)
+    - something [random](keyword)
 - intent: unhappy_with_result
   examples: |
     - that wasn't what i was looking for
@@ -376,3 +408,4 @@ nlu:
   examples: |
     - wow that's interesting
     - interesting
+    - that's great
