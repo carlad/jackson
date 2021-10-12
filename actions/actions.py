@@ -23,20 +23,21 @@ class ActionSubmitQuery(Action):
             domain: DomainDict) -> List[Dict[Text, Any]]:
         """Normalize keywords and make request."""
         #  retrieve keywords slot value
-        keywords = tracker.get_slot('keyword')
+        keywords = tracker.get_slot('keywords')
+        print(keywords)
+        print(keywords[0])
 
         # return if no keyword entities are detected
         if keywords is None:
             dispatcher.utter_message(
                 "Sorry, I wasn't able to understand your request. Try using different keywords or names.") # noqa
-            return
 
         else:
             # set headers
             headers = {'x-api-key': bha_credentials.API_KEY}
 
             # find a random fact
-            if keywords[0] == 'random':
+            if keywords[0] == 'random' or keywords[0] == 'randomly':
                 response = requests.get(
                         "https://rest.blackhistoryapi.io/fact/random",
                         headers=headers).json()
@@ -45,7 +46,7 @@ class ActionSubmitQuery(Action):
 
                 dispatcher.utter_message(
                         "Here's the random fact I found for you: \n{}.".format(text))
-                return
+
             else:
                 # normalize keywords
                 query_string = '%20'.join([singularize(keyword) for keyword in keywords]) # noqa
@@ -55,17 +56,20 @@ class ActionSubmitQuery(Action):
                             "https://rest.blackhistoryapi.io/fact/search/{}"
                             .format(query_string),
                             headers=headers).json()
+                
+                total_results = response['TotalResults']
 
-                if response['TotalResults'] == 0:
+                if total_results == 0:
                     dispatcher.utter_message(
                         "Sorry, I didn't find anything for: {}. Try using different keywords or names." # noqa
                         .format(' '.join(keywords)))
-                    return
 
                 else:
-                    texts = ''
+                    fact_string = 'fact' if total_results == 1 else 'facts'
+                    texts = 'I found {} {}:\n'.format(total_results, fact_string)
                     for i in response['Results']:
                         texts += '{}\n'.format(i['text'])
 
                 dispatcher.utter_message(texts)  # send the response back to the user
-                return [SlotSet('keyword', 'none')]
+            
+        return [SlotSet('keywords', 'none')]

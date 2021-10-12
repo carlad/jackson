@@ -11,6 +11,11 @@ rules:
     - intent: unhappy_with_result
     - action: utter_sorry_about_result
 
+- rule: say you're welcome
+  steps:
+    - intent: thank
+    - action: utter_youre_welcome
+
 - rule: Say 'there are no humans' anytime the user asks for a handoff
   steps:
   - intent: human_handoff

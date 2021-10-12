@@ -17,6 +17,10 @@ nlu:
     - good afternoon
     - hi there
     - hi there what's happening?
+    - what's happening?
+    - hi there's
+    - who's there?
+    - howdy
 - intent: goodbye
   examples: |
     - good afternoon
@@ -32,6 +36,8 @@ nlu:
     - see you later
     - okay
     - stop
+    - ok then, goodbye
+    - ok then. bye
 - intent: affirm
   examples: |
     - yes
@@ -62,7 +68,7 @@ nlu:
     - Yes please!
     - Yes, I accept
     - ok
-    - [interesting](keyword).
+    - [interesting](keywords).
     - great
     - great, let's start
 - intent: deny
@@ -127,6 +133,10 @@ nlu:
     - thanks f
     - okay, thanks for your help
     - thanks for your help
+    - thanks for that
+    - great, thanks!
+    - ok, thanks for your help
+    - wow, thanks!
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -167,6 +177,8 @@ nlu:
     - are you really a bbot?
     - who are you?
     - who are you
+    - you're still hopeless
+    - you're hopeless
 - intent: help
   examples: |
     - I need help
@@ -214,6 +226,9 @@ nlu:
     - how do you work?
     - okay, how do you work?
     - how can I find out more about this bot?
+    - okay, how do i use this?
+    - how do i do that?
+    - okay - how does this work?
 - intent: out_of_scope
   examples: |
     - what is the square root of 5
@@ -245,6 +260,11 @@ nlu:
     - Can you please send me an uber
     - what else can you do?
     - what kind of music did he play?
+    - can you give me more?
+    - can you show me all facts?
+    - how big is the black history database?
+    - get me some dinner
+    - but i want a cheese sandwich
 - intent: human_handoff
   examples: |
     - I want a human
@@ -328,6 +348,7 @@ nlu:
     - can you connect me to a human?
     - get me a human
     - find me a human
+    - but i want more
 - intent: request_query
   examples: |
     - i'd like to make a query
@@ -339,72 +360,91 @@ nlu:
     - i would like to search
 - intent: find_fact
   examples: |
-    - I'd like information about [bob](keyword) [marley](keyword)
-    - search for [billie](keyword) [holiday](keyword)
-    - [scientist](keyword)
-    - [aviator](keyword)
-    - do you have anything for [president](keyword)
-    - [barack](keyword) [obama](keyword)
-    - [writers](keyword)
-    - get me a fact about [politics](keyword)
-    - who was [angela](keyword) [davis](keyword)
+    - I'd like information about [bob](keywords) [marley](keywords)
+    - search for [billie](keywords) [holiday](keywords)
+    - [scientist](keywords)
+    - [aviator](keywords)
+    - do you have anything for [president](keywords)
+    - [barack](keywords) [obama](keywords)
+    - [writers](keywords)
+    - get me a fact about [politics](keywords)
+    - who was [angela](keywords) [davis](keywords)
     - what about [authors]
-    - Find me info about [martin](keyword) [luther](keyword) [king](keyword)
-    - who was [billie](keyword) [holiday](keyword)?
+    - Find me info about [martin](keywords) [luther](keywords) [king](keywords)
+    - who was [billie](keywords) [holiday](keywords)?
     - what about aretha franklin?
-    - what about [aretha](keyword) [franklin](keyword)
-    - search for [inventors](keyword)
-    - ok, find me some facts about [malcolm](keyword) [x](keyword)
-    - so, is there anything about [communism](keyword)?
-    - what about [politics](keyword) in general?
-    - oh, so there are facts about [communists](keyword).
-    - what about [sport](keyword) facts
-    - ok, search for [billie](keyword) [holiday](keyword)
-    - great, can you tell me about [lebron](keyword) [james](keyword)?
-    - do you have information about [inventors](keyword)?
-    - do you have anything about [martin](keyword) [luther](keyword) [king](keyword)?
-    - who is maya [angelou](keyword)?
-    - okay, find me something about [maya](keyword) [angelou](keyword)
-    - what about [Martin](keyword) [luther](keyword) [king](keyword)
-    - do you know anything about [sport](keyword)?
-    - can you find me some information about [inventors](keyword)
-    - find me info about [alicia](keyword)
-    - okay, anything regarding [artists](keyword)?
-    - what do you know about [bob](keyword) [marley](keyword)?
-    - like, [muhammad](keyword) [ali](keyword)
-    - do you have facts about muhammad [ali](keyword):?
+    - what about [aretha](keywords) [franklin](keywords)
+    - search for [inventors](keywords)
+    - ok, find me some facts about [malcolm](keywords) [x](keywords)
+    - so, is there anything about [communism](keywords)?
+    - what about [politics](keywords) in general?
+    - oh, so there are facts about [communists](keywords).
+    - what about [sport](keywords) facts
+    - ok, search for [billie](keywords) [holiday](keywords)
+    - great, can you tell me about [lebron](keywords) [james](keywords)?
+    - do you have information about [inventors](keywords)?
+    - do you have anything about [martin](keywords) [luther](keywords) [king](keywords)?
+    - who is maya [angelou](keywords)?
+    - okay, find me something about [maya](keywords) [angelou](keywords)
+    - what about [Martin](keywords) [luther](keywords) [king](keywords)
+    - do you know anything about [sport](keywords)?
+    - can you find me some information about [inventors](keywords)
+    - find me info about [alicia](keywords)
+    - okay, anything regarding [artists](keywords)?
+    - what do you know about [bob](keywords) [marley](keywords)?
+    - like, [muhammad](keywords) [ali](keywords)
+    - do you have facts about muhammad [ali](keywords):?
     - show me all the facts
     - give me [all] the facts
-    - I want to know more about [spike](keyword) [lee](keyword)
-    - can you find me anything about [dancers](keyword)?
-    - [dance](keyword)
-    - do you know any [dancers](keyword)
-    - what about [dance](keyword)
-    - do you know any [[dancers](keyword)]
-    - do you have anything about [dance](keyword)
-    - can you find me [all](keyword) the facts
-    - can you fin me anything about [dancers](keyword)?
-    - what do you know about [louis](keyword) [armstrong](keyword)?
-    - what about [oprah](keyword) [winfrey](keyword)
-    - what about [michael](keyword) [jackson](keyword)
-    - find me info about [louis](keyword) [armstrong](keyword)
-    - [random](keyword)
-    - what do you know about [Sha'Carri](keyword) [Richardson](keyword)?
-    - find me a [random](keyword) fact
-    - do you know about[ Sha'Carri](keyword) [Richardson](keyword)
-    - [Sha'Carri](keyword) [Richardson](keyword)
-    - find me something [random](keyword)
-    - give me a [random](keyword) fact
-    - find em something [random](keyword)
-    - something [random](keyword)
-    - any [musicians](keyword)?
-    - what about [prince](keyword)?
-    - [michael](keyword) [jackson](keyword)
-    - [sport](keyword)
-    - [sport](keyword)?
-    - anything about [politics](keyword)?
-    - are you sure there's nothing [random](keyword)?
-    - oh, okay how about we start with something [random](keyword)
+    - I want to know more about [spike](keywords) [lee](keywords)
+    - can you find me anything about [dancers](keywords)?
+    - [dance](keywords)
+    - do you know any [dancers](keywords)
+    - what about [dance](keywords)
+    - do you have anything about [dance](keywords)
+    - can you find me [all](keywords) the facts
+    - can you fin me anything about [dancers](keywords)?
+    - what do you know about [louis](keywords) [armstrong](keywords)?
+    - what about [oprah](keywords) [winfrey](keywords)
+    - what about [michael](keywords) [jackson](keywords)
+    - find me info about [louis](keywords) [armstrong](keywords)
+    - [random](keywords)
+    - what do you know about [Sha'Carri](keywords) [Richardson](keywords)?
+    - find me a [random](keywords) fact
+    - do you know about[ Sha'Carri](keywords) [Richardson](keywords)
+    - [Sha'Carri](keywords) [Richardson](keywords)
+    - find me something [random](keywords)
+    - give me a [random](keywords) fact
+    - find em something [random](keywords)
+    - something [random](keywords)
+    - any musicians?
+    - what about [prince](keywords)?
+    - [michael](keywords) [jackson](keywords)
+    - [sport](keywords)
+    - [sport](keywords)?
+    - anything about [politics](keywords)?
+    - are you sure there's nothing [random](keywords)?
+    - oh, okay how about we start with something [random](keywords)
+    - [obama](keywords)
+    - story
+    - [aviators](keywords)
+    - [billie](keywords) [holiday](keywords)
+    - [doctors](keywords)
+    - what about [doctors](keywords)
+    - ok, i'd like to search for [writers](keywords)
+    - academia
+    - what about tags for [academic](keywords)
+    - find me facts tagged [academia](keywords)
+    - get me another [random](keywords) fact
+    - ok. tell me about [barak](keywords) [obama](keywords).
+    - so can i search for hairdresser?
+    - [animal](keywords) [trainer](keywords)
+    - keywords. okay, ummmm, [animal](keywords) [trainer](keywords)
+    - can you just give me something [random](keywords)?
+    - fins me something about [aretha](keywords) [franklin](keywords)
+    - give me something [random](keywords)
+    - can you just give me something [randomly](keywords)?
+    - do you know any [[dancers](keywords)]
 - intent: unhappy_with_result
   examples: |
     - that wasn't what i was looking for
@@ -412,8 +452,18 @@ nlu:
     - do you have other information
     - that sux
     - is that all?
+    - this is boring
+    - that's not many facts
+    - only 1. okay that's not many.
 - intent: happy_with_result
   examples: |
     - wow that's interesting
     - interesting
     - that's great
+    - that's a lot of facts!
+- intent: more_info
+  examples: |
+    - how can i find more information about the black history api?
+    - do you have more information about the black history database?
+    - can you give me more information about the black history database?
+    - what is the black history api?

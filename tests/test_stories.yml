@@ -18,16 +18,16 @@ stories:
     intent: happy_with_result
   - action: utter_happy_to_help
   - user: |
-      what about [Martin](keyword) [luther](keyword) [king](keyword)
+      what about [Martin](keywords) [luther](keywords) [king](keywords)
     intent: find_fact
   - slot_was_set:
-    - keyword:
+    - keywords:
       - Martin
       - luther
       - king
   - action: action_submit_query
   - slot_was_set:
-    - keyword: none
+    - keywords: none
   - user: |
       thanks for your help
     intent: thank
@@ -48,7 +48,7 @@ stories:
       do you know anything about bob marley?
     intent: find_fact
   - slot_was_set:
-    - keyword:
+    - keywords:
       - bob
       - marley
   - user: |

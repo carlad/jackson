@@ -3,25 +3,26 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- find_fact
-- greet
-- how
-- goodbye
-- human_handoff
-- out_of_scope
-- unhappy_with_result
-- thank
 - affirm
 - bot_challenge
-- request_query
 - deny
-- help
-- stop
+- find_fact
+- goodbye
+- greet
 - happy_with_result
+- help
+- how
+- human_handoff
+- more_info
+- out_of_scope
+- request_query
+- thank
+- stop
+- unhappy_with_result
 entities:
-- keyword
+- keywords
 slots:
-  keyword:
+  keywords:
     type: list
     influence_conversation: true
 responses:
@@ -39,6 +40,8 @@ responses:
   - text: I'm here to help you find historical facts from black history.
   utter_how:
   - text: Just enter a name or some keywords.
+  utter_info:
+  - text: Visit [https://www.blackhistoryapi.io/](https://www.blackhistoryapi.io/) for more information about the Black History API.
   utter_ask_for_keywords:
   - text: Who or what would you like information about?
   utter_iamabot:
@@ -65,6 +68,7 @@ actions:
 - utter_greet
 - utter_help
 - utter_how
+- utter_info
 - utter_iamabot
 - utter_no_humans
 - utter_out_of_scope

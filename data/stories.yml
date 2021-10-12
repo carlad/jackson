@@ -1,7 +1,5 @@
 version: "2.0"
-
 stories:
-
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -11,40 +9,40 @@ stories:
   - action: utter_how
   - intent: find_fact
     entities:
-    - keyword: king
+    - keywords: king
   - slot_was_set:
-    - keyword:
+    - keywords:
       - king
   - action: action_submit_query
   - slot_was_set:
-    - keyword: none
+    - keywords: none
   - intent: find_fact
     entities:
-    - keyword: billie
-    - keyword: holiday
+    - keywords: billie
+    - keywords: holiday
   - slot_was_set:
-    - keyword:
+    - keywords:
       - billie
       - holiday
   - action: action_submit_query
   - intent: find_fact
     entities:
-    - keyword: aretha
-    - keyword: franklin
+    - keywords: aretha
+    - keywords: franklin
   - slot_was_set:
-    - keyword:
+    - keywords:
       - aretha
       - franklin
   - action: action_submit_query
   - intent: find_fact
     entities:
-    - keyword: inventors
+    - keywords: inventors
   - slot_was_set:
-    - keyword:
+    - keywords:
       - inventors
   - action: action_submit_query
   - slot_was_set:
-    - keyword: none
+    - keywords: none
   - intent: human_handoff
   - action: utter_no_humans
   - intent: bot_challenge
@@ -54,7 +52,6 @@ stories:
   - action: utter_about
   - intent: goodbye
   - action: utter_goodbye
-
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -64,10 +61,10 @@ stories:
   - action: utter_how
   - intent: find_fact
     entities:
-    - keyword: malcolm
-    - keyword: x
+    - keywords: malcolm
+    - keywords: x
   - slot_was_set:
-    - keyword:
+    - keywords:
       - malcolm
       - x
   - action: action_submit_query
@@ -75,43 +72,42 @@ stories:
   - action: utter_sorry_about_result
   - intent: find_fact
     entities:
-    - keyword: communism
+    - keywords: communism
   - slot_was_set:
-    - keyword:
+    - keywords:
       - communism
   - action: action_submit_query
   - intent: find_fact
     entities:
-    - keyword: politics
+    - keywords: politics
   - slot_was_set:
-    - keyword:
+    - keywords:
       - politics
   - action: action_submit_query
   - slot_was_set:
-    - keyword: none
+    - keywords: none
   - intent: find_fact
     entities:
-    - keyword: communists
+    - keywords: communists
   - slot_was_set:
-    - keyword:
+    - keywords:
       - communists
   - action: action_submit_query
   - slot_was_set:
-    - keyword: none
+    - keywords: none
   - intent: find_fact
     entities:
-    - keyword: sport
+    - keywords: sport
   - slot_was_set:
-    - keyword:
+    - keywords:
       - sport
   - action: action_submit_query
   - slot_was_set:
-    - keyword: none
+    - keywords: none
   - intent: thank
   - action: utter_youre_welcome
   - intent: goodbye
   - action: utter_goodbye
-
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -119,9 +115,9 @@ stories:
   - action: utter_about
   - intent: find_fact
     entities:
-    - keyword: alicia
+    - keywords: alicia
   - slot_was_set:
-    - keyword:
+    - keywords:
       - alicia
   - action: action_submit_query
   - intent: human_handoff
@@ -130,16 +126,257 @@ stories:
   - action: utter_how
   - intent: find_fact
     entities:
-    - keyword: artists
+    - keywords: artists
   - slot_was_set:
-    - keyword:
+    - keywords:
       - artists
   - action: action_submit_query
   - slot_was_set:
-    - keyword: none
+    - keywords: none
   - intent: unhappy_with_result
   - action: utter_sorry_about_result
   - intent: out_of_scope
   - action: utter_out_of_scope
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID 14a3eaa7732b498886cb16e776bff539
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: thank
+  - action: utter_youre_welcome
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID 25cd82b7a7454c11842f859bdad63893
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: how
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keywords: random
+  - slot_was_set:
+    - keywords:
+      - random
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - slot_was_set:
+    - keywords:
+      - random
+  - intent: find_fact
+  - action: action_submit_query
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: thank
+  - action: utter_youre_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID a22652035d14448a91f237c3a2171e66
+  steps:
+  - action: utter_info
+  - intent: how
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keywords: randomly
+  - slot_was_set:
+    - keywords:
+      - randomly
+  - action: action_submit_query
+  - intent: find_fact
+    entities:
+    - keywords: random
+  - slot_was_set:
+    - keywords:
+      - random
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: find_fact
+    entities:
+    - keywords: aretha
+    - keywords: franklin
+  - slot_was_set:
+    - keywords:
+      - aretha
+      - franklin
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: thank
+  - action: utter_youre_welcome
+  - intent: help
+  - action: utter_help
+  - action: utter_how
+  - slot_was_set:
+    - keywords:
+      - randomly
+  - slot_was_set:
+    - keywords:
+      - random
+  - slot_was_set:
+    - keywords:
+      - aretha
+      - franklin
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID fc47bea58854466db2358ccdb8e37ad9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: how
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keywords: randomly
+  - slot_was_set:
+    - keywords:
+      - randomly
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: thank
+  - action: utter_youre_welcome
+  - intent: find_fact
+    entities:
+    - keywords: aviators
+  - slot_was_set:
+    - keywords:
+      - aviators
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: find_fact
+    entities:
+    - keywords: barak
+    - keywords: obama
+  - slot_was_set:
+    - keywords:
+      - barak
+      - obama
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: help
+  - action: utter_help
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keywords: barak
+    - keywords: obama
+  - slot_was_set:
+    - keywords:
+      - barak
+      - obama
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: find_fact
+    entities:
+    - keywords: random
+  - slot_was_set:
+    - keywords:
+      - random
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: find_fact
+    entities:
+    - keywords: sport
+  - slot_was_set:
+    - keywords:
+      - sport
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - slot_was_set:
+    - keywords:
+      - randomly
+  - slot_was_set:
+    - keywords:
+      - aviators
+  - slot_was_set:
+    - keywords:
+      - barak
+      - obama
+  - slot_was_set:
+    - keywords:
+      - barak
+      - obama
+  - slot_was_set:
+    - keywords:
+      - random
+  - slot_was_set:
+    - keywords:
+      - sport
+  - intent: happy_with_result
+  - action: utter_happy_to_help
+- story: Story from Conversation ID 016f370969e94551971628bfdc3122be
+  steps:
+  - intent: find_fact
+    entities:
+    - keywords: randomly
+  - slot_was_set:
+    - keywords:
+      - randomly
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: find_fact
+    entities:
+    - keywords: martin
+    - keywords: luther
+    - keywords: king
+  - slot_was_set:
+    - keywords:
+      - martin
+      - luther
+      - king
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: find_fact
+    entities:
+    - keywords: maya
+    - keywords: angelou
+  - slot_was_set:
+    - keywords:
+      - maya
+      - angelou
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - slot_was_set:
+    - keywords:
+      - randomly
+  - slot_was_set:
+    - keywords:
+      - martin
+      - luther
+      - king
+  - slot_was_set:
+    - keywords:
+      - maya
+      - angelou
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: thank
+  - action: utter_youre_welcome
   - intent: goodbye
   - action: utter_goodbye
