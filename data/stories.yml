@@ -380,3 +380,87 @@ stories:
   - action: utter_youre_welcome
   - intent: goodbye
   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_about
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: how
+  - action: utter_how
+  - intent: find_fact
+    entities:
+    - keywords: duke
+    - keywords: elligton
+  - slot_was_set:
+    - keywords:
+      - duke
+      - elligton
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: happy_with_result
+  - action: utter_youre_welcome
+  - intent: find_fact
+    entities:
+    - keywords: billie
+    - keywords: holiday
+  - slot_was_set:
+    - keywords:
+      - billie
+      - holiday
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: happy_with_result
+  - action: utter_happy_to_help
+  - intent: find_fact
+    entities:
+    - keywords: panthers
+  - slot_was_set:
+    - keywords:
+      - panthers
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: find_fact
+    entities:
+    - keywords: black panthers
+  - slot_was_set:
+    - keywords:
+      - black panthers
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: find_fact
+    entities:
+    - keywords: random
+  - slot_was_set:
+    - keywords:
+      - random
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: thank
+  - action: utter_youre_welcome
+  - intent: find_fact
+    entities:
+    - keywords: octavia
+    - keywords: butler
+  - slot_was_set:
+    - keywords:
+      - octavia
+      - butler
+  - action: action_submit_query
+  - slot_was_set:
+    - keywords: none
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: unhappy_with_result
+  - action: utter_sorry_about_result
+  - intent: goodbye
+  - action: utter_goodbye

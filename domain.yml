@@ -3,25 +3,25 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- affirm
-- bot_challenge
-- deny
-- find_fact
-- goodbye
-- greet
-- happy_with_result
-- help
 - how
+- bot_challenge
+- find_fact
+- out_of_scope
+- greet
+- unhappy_with_result
+- goodbye
+- happy_with_result
+- thank
+- affirm
+- deny
+- help
 - human_handoff
 - more_info
-- out_of_scope
 - request_query
-- thank
 - stop
-- unhappy_with_result
 entities:
-- keywords
 - keyword
+- keywords
 slots:
   keywords:
     type: list
@@ -67,10 +67,11 @@ actions:
 - utter_did_that_help
 - utter_goodbye
 - utter_greet
+- utter_happy_to_help
 - utter_help
 - utter_how
-- utter_info
 - utter_iamabot
+- utter_info
 - utter_no_humans
 - utter_out_of_scope
 - utter_sorry_about_result

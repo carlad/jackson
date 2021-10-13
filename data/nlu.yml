@@ -38,6 +38,7 @@ nlu:
     - stop
     - ok then, goodbye
     - ok then. bye
+    - \stop
 - intent: affirm
   examples: |
     - yes
@@ -138,6 +139,7 @@ nlu:
     - ok, thanks for your help
     - wow, thanks!
     - ok. thanks
+    - ok! thanks!
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -268,6 +270,7 @@ nlu:
     - how big is the black history database?
     - get me some dinner
     - but i want a cheese sandwich
+    - I didn't know she was dyslexic
 - intent: human_handoff
   examples: |
     - I want a human
@@ -460,6 +463,12 @@ nlu:
     - i never knew there was a [communist](keywords) party in the USA
     - can you give me something [randomly](keywords)?
     - wat about something [random](keyword)?
+    - okay - do you know anything about [duke](keywords) [elligton](keywords)?
+    - what about [billie](keywords) [holiday](keywords)?
+    - anything about the black [panthers](keywords)?
+    - what about [black panthers](keywords)?
+    - can you give me something [random](keywords)?
+    - anything else about [octavia](keywords) [butler](keywords)?
 - intent: unhappy_with_result
   examples: |
     - that wasn't what i was looking for
@@ -470,12 +479,15 @@ nlu:
     - this is boring
     - that's not many facts
     - only 1. okay that's not many.
+    - not sure I understand the result
+    - that sux :(
 - intent: happy_with_result
   examples: |
     - wow that's interesting
     - interesting
     - that's great
     - that's a lot of facts!
+    - that's interesting
 - intent: more_info
   examples: |
     - how can i find more information about the black history api?
