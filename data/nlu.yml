@@ -137,6 +137,7 @@ nlu:
     - great, thanks!
     - ok, thanks for your help
     - wow, thanks!
+    - ok. thanks
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -229,6 +230,8 @@ nlu:
     - okay, how do i use this?
     - how do i do that?
     - okay - how does this work?
+    - gret, how do you work?
+    - great. how do i do that?
 - intent: out_of_scope
   examples: |
     - what is the square root of 5
@@ -360,6 +363,8 @@ nlu:
     - i would like to search
 - intent: find_fact
   examples: |
+    - how many black [cowboys](keywords) were there in the wild west
+    - who is [rosa](keywords) [parks](keywords)
     - I'd like information about [bob](keywords) [marley](keywords)
     - search for [billie](keywords) [holiday](keywords)
     - [scientist](keywords)
@@ -411,13 +416,13 @@ nlu:
     - [random](keywords)
     - what do you know about [Sha'Carri](keywords) [Richardson](keywords)?
     - find me a [random](keywords) fact
-    - do you know about[ Sha'Carri](keywords) [Richardson](keywords)
+    - do you know about[Sha'Carri](keywords) [Richardson](keywords)
     - [Sha'Carri](keywords) [Richardson](keywords)
     - find me something [random](keywords)
     - give me a [random](keywords) fact
     - find em something [random](keywords)
     - something [random](keywords)
-    - any musicians?
+    - any [musicians](keywords)?
     - what about [prince](keywords)?
     - [michael](keywords) [jackson](keywords)
     - [sport](keywords)
@@ -426,13 +431,13 @@ nlu:
     - are you sure there's nothing [random](keywords)?
     - oh, okay how about we start with something [random](keywords)
     - [obama](keywords)
-    - story
+    - [story](keywords)
     - [aviators](keywords)
     - [billie](keywords) [holiday](keywords)
     - [doctors](keywords)
     - what about [doctors](keywords)
     - ok, i'd like to search for [writers](keywords)
-    - academia
+    - [academia](keywords)
     - what about tags for [academic](keywords)
     - find me facts tagged [academia](keywords)
     - get me another [random](keywords) fact
@@ -445,6 +450,16 @@ nlu:
     - give me something [random](keywords)
     - can you just give me something [randomly](keywords)?
     - do you know any [[dancers](keywords)]
+    - what about [maya](keywords) [angelou](keywords)?
+    - anything else about [martin](keywords) [luther](keywords) [king](keywords)?
+    - give me something [randomly](keywords)
+    - what about [sport](keywords)
+    - [barak](keywords) [obama](keywords)
+    - do you know about [aviators](keywords)?
+    - can you find me something [randomly](keywords)?
+    - i never knew there was a [communist](keywords) party in the USA
+    - can you give me something [randomly](keywords)?
+    - wat about something [random](keyword)?
 - intent: unhappy_with_result
   examples: |
     - that wasn't what i was looking for
@@ -467,3 +482,4 @@ nlu:
     - do you have more information about the black history database?
     - can you give me more information about the black history database?
     - what is the black history api?
+    - who made the database?

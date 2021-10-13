@@ -12,6 +12,7 @@ from typing import Any, Dict, List, Text
 import requests
 import bha_credentials
 
+
 class ActionSubmitQuery(Action):
     """Format keywords and submits query to black history api."""
 
@@ -45,7 +46,7 @@ class ActionSubmitQuery(Action):
                 text = response['Results'][0]['text']
 
                 dispatcher.utter_message(
-                        "Here's the random fact I found for you: \n{}.".format(text))
+                        "Here's the random fact I found for you: \n{}.".format(text)) # noqa
 
             else:
                 # normalize keywords
@@ -56,7 +57,7 @@ class ActionSubmitQuery(Action):
                             "https://rest.blackhistoryapi.io/fact/search/{}"
                             .format(query_string),
                             headers=headers).json()
-                
+
                 total_results = response['TotalResults']
 
                 if total_results == 0:
@@ -66,10 +67,10 @@ class ActionSubmitQuery(Action):
 
                 else:
                     fact_string = 'fact' if total_results == 1 else 'facts'
-                    texts = 'I found {} {}:\n'.format(total_results, fact_string)
+                    texts = 'I found {} {}:\n'.format(total_results, fact_string) # noqa
                     for i in response['Results']:
                         texts += '{}\n'.format(i['text'])
 
-                dispatcher.utter_message(texts)  # send the response back to the user
-            
+                dispatcher.utter_message(texts)
+
         return [SlotSet('keywords', 'none')]

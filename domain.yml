@@ -21,6 +21,7 @@ intents:
 - unhappy_with_result
 entities:
 - keywords
+- keyword
 slots:
   keywords:
     type: list
