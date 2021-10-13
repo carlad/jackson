@@ -18,9 +18,9 @@ intents:
 - human_handoff
 - more_info
 - request_query
-- stop
+- repeated
+- not_working
 entities:
-- keyword
 - keywords
 slots:
   keywords:
@@ -61,6 +61,8 @@ responses:
   - text: What else can I help you with?
   utter_happy_to_help:
   - text: Happy to help :)
+  utter_sorry_imabot:
+  - text: Sorry, I'm a mere bot.
 actions:
 - action_submit_query
 - utter_about

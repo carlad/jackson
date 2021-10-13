@@ -21,6 +21,7 @@ nlu:
     - hi there's
     - who's there?
     - howdy
+    - hi ther
 - intent: goodbye
   examples: |
     - good afternoon
@@ -140,6 +141,7 @@ nlu:
     - wow, thanks!
     - ok. thanks
     - ok! thanks!
+    - cool
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -234,6 +236,7 @@ nlu:
     - okay - how does this work?
     - gret, how do you work?
     - great. how do i do that?
+    - any name?
 - intent: out_of_scope
   examples: |
     - what is the square root of 5
@@ -271,6 +274,7 @@ nlu:
     - get me some dinner
     - but i want a cheese sandwich
     - I didn't know she was dyslexic
+    - hmmm
 - intent: human_handoff
   examples: |
     - I want a human
@@ -469,6 +473,10 @@ nlu:
     - what about [black panthers](keywords)?
     - can you give me something [random](keywords)?
     - anything else about [octavia](keywords) [butler](keywords)?
+    - do you have anything for [sports](keywords)
+    - what about [cassius](keyword) [clay](keyword)?
+    - do you have anything about [muhammad](keyword) [ali](keywords)?
+    - [muhammad](keywords) [ali](keywords)
 - intent: unhappy_with_result
   examples: |
     - that wasn't what i was looking for
@@ -481,6 +489,8 @@ nlu:
     - only 1. okay that's not many.
     - not sure I understand the result
     - that sux :(
+    - you already told me that!
+    - nothing?
 - intent: happy_with_result
   examples: |
     - wow that's interesting
@@ -495,3 +505,9 @@ nlu:
     - can you give me more information about the black history database?
     - what is the black history api?
     - who made the database?
+- intent: repeated
+  examples: |
+    - i did that already!
+- intent: not_working
+  examples: |
+    - i feel like this isn't working
