@@ -78,5 +78,4 @@ actions:
 - utter_out_of_scope
 - utter_sorry_about_result
 - utter_what_else
-- utter_what_keywords
 - utter_youre_welcome

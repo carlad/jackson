@@ -466,7 +466,7 @@ nlu:
     - can you find me something [randomly](keywords)?
     - i never knew there was a [communist](keywords) party in the USA
     - can you give me something [randomly](keywords)?
-    - wat about something [random](keyword)?
+    - wat about something [random](keywords)?
     - okay - do you know anything about [duke](keywords) [elligton](keywords)?
     - what about [billie](keywords) [holiday](keywords)?
     - anything about the black [panthers](keywords)?
@@ -474,8 +474,8 @@ nlu:
     - can you give me something [random](keywords)?
     - anything else about [octavia](keywords) [butler](keywords)?
     - do you have anything for [sports](keywords)
-    - what about [cassius](keyword) [clay](keyword)?
-    - do you have anything about [muhammad](keyword) [ali](keywords)?
+    - what about [cassius](keywords) [clay](keywords)?
+    - do you have anything about [muhammad](keywords) [ali](keywords)?
     - [muhammad](keywords) [ali](keywords)
 - intent: unhappy_with_result
   examples: |
