@@ -10,7 +10,10 @@ Jackson uses a simple keyword search.
 
 Python 3.8.6
 
-Jackson requires [rasa-sdk](https://github.com/RasaHQ/rasa-sdk) to run the custom search action:
+Jackson requires [Rasa](https://github.com/RasaHQ/rasa). 
+See the [installation instructions](https://rasa.com/docs/rasa/installation) for different OS systems.
+
+and [rasa-sdk](https://github.com/RasaHQ/rasa-sdk) to run the custom search action:
 ```
 pip install rasa-sdk
 ```
